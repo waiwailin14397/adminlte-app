@@ -1,11 +1,10 @@
 <template>
-    <Header />
+    <!-- <Header /> -->
     <h2><p v-if="message">{{ message }}</p></h2>
-    <div class="wrapper">
-        <!-- <router-view /> -->
+    <!-- <div class="wrapper">
         <Home />
     </div>
-    <Footer />
+    <Footer /> -->
     <!-- ./wrapper -->
 </template>
 
@@ -29,7 +28,7 @@
                 message: "",
                 error: ""
             };
-	    },
+        },
         mounted() {
             liff
             .init({
