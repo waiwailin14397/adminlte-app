@@ -40,27 +40,27 @@
   </template>
   
   <script>
-  export default {
-    data() {
-		return {
-		message: "",
-		error: ""
-		};
-	},
-	mounted() {
-		liff
-		.init({
-			liffId: import.meta.env.VITE_LIFF_ID
-		})
-		.then(() => {
-			this.message = "LIFF init succeeded.";
-		})
-		.catch((e) => {
-			this.message = "LIFF init failed.";
-			this.error = `${e}`;
-		});
-	}
-  }
+//   export default {
+//     data() {
+// 		return {
+// 			message: "",
+// 			error: ""
+// 		};
+// 	},
+// 	mounted() {
+// 		liff
+// 		.init({
+// 			liffId: import.meta.env.VITE_LIFF_ID
+// 		})
+// 		.then(() => {
+// 			this.message = "LIFF init succeeded.";
+// 		})
+// 		.catch((e) => {
+// 			this.message = "LIFF init failed.";
+// 			this.error = `${e}`;
+// 		});
+// 	}
+// }
   </script>
   
   <style>
