@@ -1,6 +1,6 @@
 <template>
     <!-- <Header /> -->
-    <h2><p v-if="message">{{ message }}</p></h2>
+    <p v-if="message">{{ message }}</p>
     <!-- <div class="wrapper">
         <Home />
     </div>
@@ -18,11 +18,11 @@
     import Home from './views/Home.vue';
 
     export default {
-        components: {
-            Header,
-            Footer,
-            Home
-        },
+        // components: {
+        //     Header,
+        //     Footer,
+        //     Home
+        // },
         data() {
             return {
                 message: "",
