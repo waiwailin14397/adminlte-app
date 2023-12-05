@@ -17,17 +17,16 @@
     import Footer from './components/Footer.vue';
     import Home from './views/Home.vue';
     export default {
-        // components: {
-        //     Header,
-        //     Footer,
-        //     Home
-        // },
-        // data() {
-        //     return {
-        //     currentView: 'home', // Set the default view
-        //     };
-        // },
-    // App-level logic goes here
+        components: {
+            Header,
+            Footer,
+            Home
+        },
+        data() {
+            return {
+                // currentView: 'home', // Set the default view
+            };
+        },
     }
 </script>
 
