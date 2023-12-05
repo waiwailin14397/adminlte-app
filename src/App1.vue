@@ -1,11 +1,12 @@
 <template>
-<Header />
-<div class="wrapper">
-    <!-- <router-view /> -->
-    <Home />
-</div>
-<Footer />
-<!-- ./wrapper -->
+    <Header />
+    <h2><p v-if="message">{{ message }}</p></h2>
+    <div class="wrapper">
+        <!-- <router-view /> -->
+        <Home />
+    </div>
+    <Footer />
+    <!-- ./wrapper -->
 </template>
 
 <script>
@@ -16,6 +17,7 @@
     import Header from './components/Header.vue';
     import Footer from './components/Footer.vue';
     import Home from './views/Home.vue';
+
     export default {
         components: {
             Header,
@@ -24,9 +26,23 @@
         },
         data() {
             return {
-                // currentView: 'home', // Set the default view
+                message: "",
+                error: ""
             };
-        },
+	    },
+        mounted() {
+            liff
+            .init({
+                liffId: import.meta.env.VITE_LIFF_ID
+            })
+            .then(() => {
+                this.message = "LIFF init succeeded.";
+            })
+            .catch((e) => {
+                this.message = "LIFF init failed.";
+                this.error = `${e}`;
+            });
+        }
     }
 </script>
 
