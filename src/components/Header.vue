@@ -5,7 +5,7 @@
     <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button">
-          <i class="fas fa-bars"></i>
+          <i class="fa-thin fa-house"></i>
         </a>
       </li>
     </ul>
