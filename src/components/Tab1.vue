@@ -21,7 +21,7 @@
 				<span class="info-box-text text-sm">
 				  <div class="container-fluid">
 					<div class="row">
-					  <div class="col-sm-auto"><b>【件名】</b> テスト1 </div>
+					  <div class="col-sm-auto"><b>【件名】</b> <p v-if="message">{{ message }}</p> </div>
 					</div>
 				  </div>
 				</span>
@@ -41,7 +41,26 @@
   
   <script>
   export default {
-  // View-specific logic goes here
+    data() {
+		return {
+		message: "",
+		error: ""
+		};
+	},
+	mounted() {
+		liff
+		.init({
+			liffId: import.meta.env.VITE_LIFF_ID
+		})
+		.then(() => {
+			const context = liff.getContext();
+			this.message = context;
+		})
+		.catch((e) => {
+			this.message = "LIFF init failed.";
+			this.error = `${e}`;
+		});
+	}
   }
   </script>
   
