@@ -1,28 +1,30 @@
 <template>
-    <!-- <Header /> -->
-    <p v-if="message">{{ message }}</p>
-    <!-- <div class="wrapper">
+    <Header />
+    <h2><p v-if="message">{{ message }}</p></h2>
+    <div class="wrapper">
+        <!-- <router-view /> -->
         <Home />
     </div>
-    <Footer /> -->
+    <Footer />
     <!-- ./wrapper -->
 </template>
 
 <script>
-    // import 'admin-lte/dist/css/adminlte.min.css';
-    // import 'admin-lte/dist/js/adminlte.min.js';
-    // import 'admin-lte/plugins/fontawesome-free/css/all.min.css';
+    import liff from "@line/liff";
+    import 'admin-lte/dist/css/adminlte.min.css';
+    import 'admin-lte/dist/js/adminlte.min.js';
+    import 'admin-lte/plugins/fontawesome-free/css/all.min.css';
 
-    // import Header from './components/Header.vue';
-    // import Footer from './components/Footer.vue';
-    // import Home from './views/Home.vue';
+    import Header from './components/Header.vue';
+    import Footer from './components/Footer.vue';
+    import Home from './views/Home.vue';
 
     export default {
-        // components: {
-        //     Header,
-        //     Footer,
-        //     Home
-        // },
+        components: {
+            Header,
+            Footer,
+            Home
+        },
         data() {
             return {
                 message: "",
