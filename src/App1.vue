@@ -2,7 +2,7 @@
 	<Header />
 	<div class="wrapper">
 	  <!-- <router-view /> -->
-	  <Form1 />
+	  <Home />
 	</div>
 	<Footer />
 	<!-- ./wrapper -->
@@ -15,17 +15,17 @@
   
   import Header from './components/Header.vue';
   import Footer from './components/Footer.vue';
-  import Form1 from './views/Form1.vue';
+  import Home from './views/Home.vue';
   
   export default {
 	components: {
 	  Header,
 	  Footer,
-	  Form1
+	  Home
 	},
 	data() {
 	  return {
-		currentView: 'form1', // Set the default view
+		currentView: 'home', // Set the default view
 	  };
 	},
 	// App-level logic goes here
