@@ -43,7 +43,7 @@
   export default {
     data() {
 		return {
-		message: null,
+		message: "",
 		error: ""
 		};
 	},
@@ -53,8 +53,7 @@
 			liffId: import.meta.env.VITE_LIFF_ID
 		})
 		.then(() => {
-			const context = liff.getContext();
-			this.message = context;
+			this.message = "LIFF init succeeded.";
 		})
 		.catch((e) => {
 			this.message = "LIFF init failed.";
