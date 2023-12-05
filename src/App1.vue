@@ -10,7 +10,6 @@
 </template>
 
 <script>
-    import liff from "@line/liff";
     import 'admin-lte/dist/css/adminlte.min.css';
     import 'admin-lte/dist/js/adminlte.min.js';
     import 'admin-lte/plugins/fontawesome-free/css/all.min.css';
@@ -26,24 +25,24 @@
             Home
         },
         data() {
-            return {
-                message: "",
-                error: ""
-            };
+            // return {
+            //     message: "",
+            //     error: ""
+            // };
         },
-        mounted() {
-            liff
-            .init({
-                liffId: import.meta.env.VITE_LIFF_ID
-            })
-            .then(() => {
-                this.message = "LIFF init succeeded.";
-            })
-            .catch((e) => {
-                this.message = "LIFF init failed.";
-                this.error = `${e}`;
-            });
-        }
+        // mounted() {
+        //     liff
+        //     .init({
+        //         liffId: import.meta.env.VITE_LIFF_ID
+        //     })
+        //     .then(() => {
+        //         this.message = "LIFF init succeeded.";
+        //     })
+        //     .catch((e) => {
+        //         this.message = "LIFF init failed.";
+        //         this.error = `${e}`;
+        //     });
+        // }
     }
 </script>
 
