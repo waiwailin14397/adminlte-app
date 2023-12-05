@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@line/liff": "2.23.0",
+    "admin-lte": "^3.2.0",
     "vue": "3.3.10"
   },
   "devDependencies": {
